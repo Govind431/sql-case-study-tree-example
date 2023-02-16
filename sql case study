@@ -1,0 +1,16 @@
+select *,
+case when total_marks>=90 then 'A+',
+     when total marks>=85 and total marks<90 then 'A',
+     when total marks>=75 and total marks<85 then 'B+',
+     when total marks>=60 and total marks<75 then 'B'
+     else 'C'end as grade
+from table name;
+
+
+select node,
+case when parent is NULL then'root',
+     when node in (select distinct parent from tree where parent is not null) then 'internal',
+     else 'leaf' end as type 
+from tree;
+
+
